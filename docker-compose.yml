@@ -9,3 +9,9 @@ services:
     env_file:
       - ./.env
     command: node --watch bin/www
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    external: true
